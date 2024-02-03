@@ -5,7 +5,6 @@ use App\Models\User;
 use App\Models\Category;
 use App\Models\Car;
 use App\Models\Message;
-// use App\Models\Listing;
 use App\Models\Testimonial;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;

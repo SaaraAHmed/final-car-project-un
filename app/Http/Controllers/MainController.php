@@ -4,11 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\View\View;
-// use App\Models\Listing;
 use App\Models\Car;
-// use App\Models\Single;
 use App\Models\Category;
 use App\Models\Testimonial;
+use App\Models\Single;
 use Illuminate\Support\Facades\DB;
 
 class MainController extends Controller
@@ -16,8 +15,7 @@ class MainController extends Controller
     public function index(): View{
         $testimonials = Testimonial::where('published', 1)->take(3)->get();
         $cars = Car::take(6)->get(); 
-        
-        return view('index', compact(['cars','testimonials']));
+        return view('index',compact(['cars','testimonials']));
        // return view('index');
 
     }

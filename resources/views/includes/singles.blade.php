@@ -32,6 +32,7 @@
                   <div class="col-12 mt-3 mb-1">
                     <h4 class="text-uppercase">Properties</h4>
                     <p>Car Details</p>
+                    <p>{{$car->name}}</p>
                   </div>
                 </div>
                 <div class="row">

@@ -14,10 +14,10 @@ class SingleController extends Controller
      */
     public function single()
     { 
-        return view('single');
-        // $cars = Car::get();
-        // $singles = Single::get();
-        // return view('single',compact(['cars','singles']));
+        // return view('single');
+        $cars = Car::take(2)->get();
+        $categories = Category::get();
+        return view('single',compact(['cars','categories']));
      
     }
 
