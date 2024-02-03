@@ -53,7 +53,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 
-Route::group(['prefix' => 'admin','middleware' ,], function () {
+Route::group(['prefix' => 'admin','middleware' => ['verified']], function () {
     Route::group(
         ['prefix' => 'users',], function () {
         Route::get('index', [UserController::class, 'index'])->name('users');
