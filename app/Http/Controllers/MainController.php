@@ -9,9 +9,12 @@ use App\Models\Category;
 use App\Models\Testimonial;
 use App\Models\Single;
 use Illuminate\Support\Facades\DB;
+use App\Traits\Common;
 
 class MainController extends Controller
 {
+    use Common;
+
     public function index(): View{
         $testimonials = Testimonial::where('published', 1)->take(3)->get();
         $cars = Car::take(6)->get(); 
