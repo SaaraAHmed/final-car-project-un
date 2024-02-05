@@ -97,7 +97,7 @@ class CarController extends Controller
             'category_id'     => 'required',
          
         ]);
-
+        $data['published'] = isset($request->published);
         if(isset($request->image)){
             $data['image'] = $this->uploadFile($request->image, 'adminAssets/./images');
         }

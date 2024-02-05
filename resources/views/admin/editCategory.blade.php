@@ -253,12 +253,12 @@
 								</div>
 								<div class="x_content">
 									<br />
-									<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="{{route('updateCategory', $category->id)}}" method="post" enctype="multipart/form-data">
+									<form  action="{{route('updateCategory', $categories->id)}}" method="post" enctype="multipart/form-data" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 												@csrf
 												@method('put')
 
 										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="add-category"  name="categoryName" value="{{$category->categoryName}}">Edit Category <span class="required">*</span>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="add-category"  name="categoryName" value="{{$categories->categoryName}}">Edit Category <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
 												<input type="text" id="add-category" required="required" class="form-control ">

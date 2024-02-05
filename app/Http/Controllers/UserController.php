@@ -59,7 +59,7 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        $user = User::findOrFail($id);
+        $user=User::findOrFail($id);
 
         return view('admin.editUser', compact('user'));
     }
@@ -77,9 +77,7 @@ class UserController extends Controller
             'password'            => 'required'
         ]);
 
-        if(isset($request->image)){
-           
-        }
+    
 
         User::where('id', $id)->update($data);
         return 'true';

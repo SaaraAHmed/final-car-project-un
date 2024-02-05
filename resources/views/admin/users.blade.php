@@ -48,7 +48,9 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>John Doe</h2>
+                @foreach($users as $user)
+                <h2>{{$user->name}}</h2>
+                 @endforeach
               </div>
             </div>
             <!-- /menu profile quick info -->

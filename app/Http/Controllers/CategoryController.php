@@ -57,8 +57,8 @@ class CategoryController extends Controller
      */
     public function edit(string $id)
     {
-        $category = Category::findOrFail($id);
-        return view('admin.editCategory', compact('category'));
+        $categories = Category::findOrFail($id);
+        return view('admin.editCategory', compact('categories'));
     }
 
     /**
@@ -67,7 +67,7 @@ class CategoryController extends Controller
     public function update(Request $request, string $id)
     {
         $data = $request->validate([
-            'CategoryName'       => 'required',
+            'categoryName'   => 'required',
           
         ]);
         Category::where('id', $id)->update($data);

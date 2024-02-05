@@ -259,14 +259,14 @@
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Full Name <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
-												<input type="text" id="first-name" required="required" class="form-control " name="fullName" value="{{$user->fullName}}">
+												<input type="text" id="fullName" required="required" class="form-control " name="fullName" value="{{$user->fullName}}">
 											</div>
 										</div>
 										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="user-name">Username <span class="required">*</span>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="userName">Username <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
-												<input type="text" id="user-name"  required="required" class="form-control" name="userName" value="{{$user->userName}}">
+												<input type="text" id="userName"  required="required" class="form-control" name="userName" value="{{$user->userName}}">
 											</div>
 										</div>
 										<div class="item form-group">
